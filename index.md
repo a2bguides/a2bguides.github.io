@@ -22,4 +22,7 @@ against its source, and we say plainly when something couldn't be checked.
 - [Taking card payments as a UK tradesperson: an independent comparison](guides/card-payments/)  
   SumUp, Square, Zettle by PayPal, Stripe and Dojo compared on their published UK fees, with worked examples on a £200 job and £2,000 a month. *Last checked 11 October 2026.*
 
+- [Free quote and invoice templates for UK trades](guides/quote-invoice-templates/)  
+  Copyable quote and invoice templates that include every item GOV.UK says an invoice must show, plus payment terms, late payment and VAT basics. *Last checked 11 October 2026.*
+
 [About these guides, referrals and corrections](about/)
