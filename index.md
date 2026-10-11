@@ -16,4 +16,7 @@ against its source, and we say plainly when something couldn't be checked.
 - [Set up a free enquiry logger with Google Forms and Google Sheets](guides/enquiry-logger/)  
   A free form that logs every enquiry into a spreadsheet automatically, with repeat detection and a 48-hour follow-up date. Tested live with a real Google account. *Last checked 11 October 2026.*
 
+- [Job-management apps for UK trades compared: a guide for one- and two-person businesses](guides/trade-job-apps/)  
+  Tradify, Jobber, ServiceM8, Fergus and Powered Now compared from their own pricing pages, plus a free option, for one- and two-person trade businesses. *Last checked 11 October 2026.*
+
 [About these guides, referrals and corrections](about/)
