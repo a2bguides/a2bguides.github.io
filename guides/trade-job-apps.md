@@ -2,9 +2,17 @@
 layout: page
 title: "Job-management apps for UK trades compared: a guide for one- and two-person businesses"
 permalink: /guides/trade-job-apps/
+description: "Tradify, Jobber, ServiceM8, Fergus and Powered Now compared from their UK pricing pages for one- and two-person trade businesses, plus a free option."
 ---
 
 > **Last checked: 11 October 2026.** Prices and plans change often; check each vendor's page before deciding.
+
+> **Free spreadsheets** (Excel files that also open in Google Sheets and Numbers):
+>
+> - [Job and payment tracker]({{ '/downloads/a2b-job-payment-tracker.xlsx' | relative_url }}){: data-goatcounter-click="download-job-payment-tracker" data-goatcounter-title="Job and payment tracker" } (shows what you're owed, what's overdue and what you invoiced each month)
+> - [Quote and invoice workbook]({{ '/downloads/a2b-quote-invoice-workbook.xlsx' | relative_url }}){: data-goatcounter-click="download-quote-invoice-workbook" data-goatcounter-title="Quote and invoice workbook" } (fill in your details once; totals, VAT and the due date work themselves out)
+>
+> Free to use. No sign-up.
 
 This is an independent comparison of five job-management apps that UK trades use for quotes, scheduling and invoices: Tradify, Jobber, ServiceM8, Fergus and Powered Now. It uses only facts taken from each vendor's own pricing page. Prices and features were taken from those pages on **11 October 2026**, and the URLs are listed in the Sources section. We have not tested the apps, and the pages may have changed since that date, so confirm everything on the vendor's page before you sign up.
 
