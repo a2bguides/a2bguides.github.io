@@ -1,0 +1,7 @@
+title: A2B Guides
+description: Practical, tested guides for solo service businesses and freelancers.
+theme: minima
+lang: en-GB
+corrections_form: https://docs.google.com/forms/d/e/1FAIpQLSeYbVHu9IWSTcGlUeTtoVnzS2GAWpTDzjcngaJQsqGYdLuczQ/viewform
+header_pages:
+  - about.md
