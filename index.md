@@ -25,4 +25,7 @@ against its source, and we say plainly when something couldn't be checked.
 - [Free quote and invoice templates for UK trades](guides/quote-invoice-templates/)  
   Copyable quote and invoice templates that include every item GOV.UK says an invoice must show, plus payment terms, late payment and VAT basics. *Last checked 11 October 2026.*
 
+- [Setting up a Google Business Profile as a UK tradesperson working from home](guides/google-business-profile-trades/)  
+  Answer the reader's question: How do I get my trade business on Google Maps and Search without showing my home address, get it verified, and start collecting re *Last checked 11 October 2026.*
+
 [About these guides, referrals and corrections](about/)
