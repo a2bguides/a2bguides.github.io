@@ -2,6 +2,7 @@
 layout: page
 title: "Setting up a Google Business Profile as a UK tradesperson working from home"
 permalink: /guides/google-business-profile-trades/
+description: "How a UK tradesperson working from home can get on Google Maps without showing their address: service areas, verification and reviews, from Google's own help pages."
 ---
 
 > **Last checked: 11 October 2026.** Prices and rules change; check the linked sources before relying on them.
