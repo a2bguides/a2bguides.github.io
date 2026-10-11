@@ -2,6 +2,7 @@
 layout: page
 title: "Taking card payments as a UK tradesperson: an independent comparison"
 permalink: /guides/card-payments/
+description: "SumUp, Square, Zettle, Stripe and Dojo compared on their published UK fees, with worked examples for a £200 job and £2,000 a month of card payments."
 ---
 
 > **Last checked: 11 October 2026.** Fees change; check each provider's page before deciding.
