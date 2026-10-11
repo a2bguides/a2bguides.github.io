@@ -2,9 +2,16 @@
 layout: page
 title: "Set up a free enquiry logger with Google Forms and Google Sheets"
 permalink: /guides/enquiry-logger/
+description: "Set up a free Google Form that logs every enquiry into Google Sheets automatically, with repeat-customer detection and a 48-hour follow-up date."
 ---
 
 > **Get the script:** [open the enquiry logger script (Code-form-only.gs) as plain text]({{ '/templates/enquiry-logger-script.txt' | relative_url }}). Select all, copy, and paste it where step 1 of the setup says. **Last checked: 11 October 2026.**
+
+> **Free spreadsheet** (Excel files that also open in Google Sheets and Numbers):
+>
+> - [Enquiry log]({{ '/downloads/a2b-enquiry-log.xlsx' | relative_url }}){: data-goatcounter-click="download-enquiry-log" data-goatcounter-title="Enquiry log" } (sets a 2-day follow-up date and flags anything waiting for a reply)
+>
+> Free to use. No sign-up.
 
 This guide walks you through setting up the enquiry logger script (Code-form-only.gs). It gives you a web form to share with customers. Every submission is logged automatically into a Google Sheet, with repeat detection, a Rejected tab, an Activity tab and a follow-up date 48 hours after each enquiry arrives. It is free to run on a standard Google account.
 
@@ -195,7 +202,6 @@ Google's documentation says triggers can be added or managed through the Trigger
 Deleting the trigger only stops the logging. The form stays published and can still accept responses unless you close it in the form's own settings.
 
 Deleting the spreadsheet does not delete the form: Google states "Deleting a spreadsheet doesn't delete the form, and vice versa" (https://support.google.com/docs/answer/2917686, checked 11 October 2026).
-
 ## Where to get help
 
 No personal setup help is offered with this guide, and I cannot answer individual questions about your account. For help, use Google's own pages:
