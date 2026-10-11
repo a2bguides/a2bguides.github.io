@@ -2,9 +2,17 @@
 layout: page
 title: "Free quote and invoice templates for UK trades"
 permalink: /guides/quote-invoice-templates/
+description: "Free quote and invoice templates for UK trades, with everything GOV.UK says an invoice must show, plus payment terms, late payment and VAT basics."
 ---
 
 > **Last checked: 11 October 2026.** Rules and rates change; check the GOV.UK pages linked below before relying on them.
+
+> **Free spreadsheets** (Excel files that also open in Google Sheets and Numbers):
+>
+> - [Quote and invoice workbook]({{ '/downloads/a2b-quote-invoice-workbook.xlsx' | relative_url }}){: data-goatcounter-click="download-quote-invoice-workbook" data-goatcounter-title="Quote and invoice workbook" } (fill in your details once; totals, VAT and the due date work themselves out)
+> - [Job and payment tracker]({{ '/downloads/a2b-job-payment-tracker.xlsx' | relative_url }}){: data-goatcounter-click="download-job-payment-tracker" data-goatcounter-title="Job and payment tracker" } (shows what you're owed, what's overdue and what you invoiced each month)
+>
+> Free to use. No sign-up.
 
 ## Who this is for
 
