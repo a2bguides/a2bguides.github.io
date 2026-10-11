@@ -13,4 +13,7 @@ against its source, and we say plainly when something couldn't be checked.
   Capture every enquiry once, see its status and know when to follow up.
   Covers a free email-plus-spreadsheet method and compares Make, n8n and Zapier. *Last checked 11 October 2026.*
 
+- [Set up a free enquiry logger with Google Forms and Google Sheets](guides/enquiry-logger/)  
+  A free form that logs every enquiry into a spreadsheet automatically, with repeat detection and a 48-hour follow-up date. Tested live with a real Google account. *Last checked 11 October 2026.*
+
 [About these guides, referrals and corrections](about/)
