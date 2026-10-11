@@ -8,3 +8,4 @@ header_pages:
 url: "https://a2bguides.github.io"
 plugins:
   - jekyll-sitemap
+  - jekyll-seo-tag
