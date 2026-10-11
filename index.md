@@ -29,3 +29,5 @@ against its source, and we say plainly when something couldn't be checked.
   How to get on Google Maps and Search without showing your home address: service areas, verification, review links and replying to reviews, all from Google's own help pages. *Last checked 11 October 2026.*
 
 [About these guides, referrals and corrections](about/)
+
+<p style="font-size:0.75em;color:#828282">Impact-Site-Verification: 59b0ca1c-1fc2-43fa-86c0-f40261f2212c</p>
