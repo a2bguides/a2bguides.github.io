@@ -1,0 +1,13 @@
+<script>
+  // Count clicks on links that leave this site, named by destination (e.g. "out-make.com").
+  document.querySelectorAll('a[href^="http"]').forEach(function (a) {
+    try {
+      var host = new URL(a.href).hostname.replace(/^www\./, '');
+      if (host !== location.hostname && !a.hasAttribute('data-goatcounter-click')) {
+        a.setAttribute('data-goatcounter-click', 'out-' + host);
+        a.setAttribute('data-goatcounter-title', a.textContent.trim().slice(0, 80));
+      }
+    } catch (e) {}
+  });
+</script>
+<script data-goatcounter="https://a2benterprise.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
