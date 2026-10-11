@@ -2,9 +2,16 @@
 layout: page
 title: "Keeping track of enquiries: a starter guide to basic and automated options"
 permalink: /guides/enquiry-tracking/
+description: "How a solo trade or service business can log every enquiry once and follow up on time, with a free spreadsheet method and a comparison of Make, n8n and Zapier."
 ---
 
 > **Last checked: 11 October 2026.** Vendor details below were checked on each vendor's own page on that date. Prices and plans change, so check the vendor's page before deciding.
+
+> **Free spreadsheet** (Excel files that also open in Google Sheets and Numbers):
+>
+> - [Enquiry log]({{ '/downloads/a2b-enquiry-log.xlsx' | relative_url }}){: data-goatcounter-click="download-enquiry-log" data-goatcounter-title="Enquiry log" } (sets a 2-day follow-up date and flags anything waiting for a reply)
+>
+> Free to use. No sign-up.
 
 ## Who this is for
 
