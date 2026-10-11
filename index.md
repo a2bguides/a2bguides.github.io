@@ -19,4 +19,7 @@ against its source, and we say plainly when something couldn't be checked.
 - [Job-management apps for UK trades compared: a guide for one- and two-person businesses](guides/trade-job-apps/)  
   Tradify, Jobber, ServiceM8, Fergus and Powered Now compared from their own pricing pages, plus a free option, for one- and two-person trade businesses. *Last checked 11 October 2026.*
 
+- [Taking card payments as a UK tradesperson: an independent comparison](guides/card-payments/)  
+  SumUp, Square, Zettle by PayPal, Stripe and Dojo compared on their published UK fees, with worked examples on a £200 job and £2,000 a month. *Last checked 11 October 2026.*
+
 [About these guides, referrals and corrections](about/)
