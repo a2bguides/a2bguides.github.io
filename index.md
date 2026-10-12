@@ -28,6 +28,9 @@ against its source, and we say plainly when something couldn't be checked.
 - [Setting up a Google Business Profile as a UK tradesperson working from home](guides/google-business-profile-trades/)  
   How to get on Google Maps and Search without showing your home address: service areas, verification, review links and replying to reviews, all from Google's own help pages. *Last checked 11 October 2026.*
 
+- [Free invoicing apps for UK sole traders compared: Square, SumUp and Zoho Invoice](guides/free-invoicing-apps/)  
+  A side-by-side look at the free plans of Square Invoices, SumUp Invoices and Zoho Invoice, covering card fees, limits and what a UK invoice must show. *Last checked 12 October 2026.*
+
 [About these guides, referrals and corrections](about/)
 
 <p style="font-size:0.75em;color:#828282">Impact-Site-Verification: 59b0ca1c-1fc2-43fa-86c0-f40261f2212c</p>
