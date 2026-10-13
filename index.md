@@ -23,7 +23,7 @@ against its source, and we say plainly when something couldn't be checked.
   SumUp, Square, Zettle by PayPal, Stripe and Dojo compared on their published UK fees, with worked examples on a £200 job and £2,000 a month. *Last checked 11 October 2026.*
 
 - [Free quote and invoice templates for UK trades](guides/quote-invoice-templates/)  
-  Copyable quote and invoice templates that include every item GOV.UK says an invoice must show, plus payment terms, late payment and VAT basics. *Last checked 11 October 2026.*
+  Copyable quote and invoice templates that include every item GOV.UK says an invoice must show, plus payment terms, late payment and VAT basics. *Last checked 13 October 2026.*
 
 - [Setting up a Google Business Profile as a UK tradesperson working from home](guides/google-business-profile-trades/)  
   How to get on Google Maps and Search without showing your home address: service areas, verification, review links and replying to reviews, all from Google's own help pages. *Last checked 11 October 2026.*
