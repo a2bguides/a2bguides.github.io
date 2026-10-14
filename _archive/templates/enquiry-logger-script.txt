@@ -1,0 +1,202 @@
+/**
+ * Enquiry logger — Google Apps Script
+ *
+ * FORM-ONLY VERSION, for a Google account registered with a non-Gmail address
+ * (such as an Outlook address). It never reads or sends email.
+ *
+ * Logs every enquiry from a Google Form into one Google Sheet automatically.
+ * The form link is what you share: it shows no email address at all.
+ *
+ * Rules (the same as the tested enquiry example):
+ *   - each enquiry is stored once; the same submission seen again is ignored
+ *   - an identical message from the same address within 30 minutes is treated as a
+ *     repeated delivery and ignored (logged on the Activity tab)
+ *   - different enquiries from the same person stay as separate rows
+ *   - missing name, invalid email address, missing message or unreadable time:
+ *     not stored as an enquiry; listed on the Rejected tab with the reasons
+ *   - every stored enquiry gets a follow-up time 48 hours after it arrived
+ *
+ * Setup: paste this whole file into a new project at script.google.com while
+ * signed in to the business Google account, choose `setup` and press Run.
+ * Run `setup` once only; running it again does nothing if it is already set up.
+ */
+
+var CONFIG = {
+  FOLLOW_UP_HOURS: 48,
+  REPEAT_WINDOW_MINUTES: 30,
+  MAX_MESSAGE_CHARS: 2000,
+  STATUSES: ['New', 'Replied', 'Quote sent', 'Won', 'Lost']
+};
+
+var HEADERS = {
+  Enquiries: ['Enquiry ID', 'Received', 'Source', 'Name', 'Email', 'Message', 'Status',
+              'Follow up by', 'Follow-up rule', 'Notes'],
+  Rejected: ['Reference', 'Received', 'Source', 'Name given', 'Email given', 'Reasons', 'Message (start)'],
+  Activity: ['Logged at', 'Source', 'Reference', 'Outcome', 'Detail']
+};
+
+/* ------------------------------------------------------------------ rules
+ * Pure functions: no Google services, so they can be tested on their own. */
+
+var EMAIL_RE = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+
+function validateEnquiry(c) {
+  var reasons = [];
+  if (!c.name || !String(c.name).trim()) reasons.push('name missing');
+  if (!c.email || !String(c.email).trim()) reasons.push('email address missing');
+  else if (!EMAIL_RE.test(String(c.email).trim())) reasons.push('email address not valid');
+  if (!c.message || !String(c.message).trim()) reasons.push('message missing');
+  if (Object.prototype.toString.call(c.received) !== '[object Date]' || isNaN(c.received.getTime())) reasons.push('received time unreadable');
+  return reasons;
+}
+
+function normalise(text) {
+  return String(text || '').toLowerCase().replace(/\s+/g, ' ').trim();
+}
+
+/** existing: [{id, email, message, received(Date)}] */
+function classify(c, existing, windowMinutes) {
+  for (var i = 0; i < existing.length; i++) {
+    if (existing[i].id === c.id) return {outcome: 'already logged', matches: c.id};
+  }
+  var reasons = validateEnquiry(c);
+  if (reasons.length) return {outcome: 'rejected', reasons: reasons};
+  var key = normalise(c.email) + '|' + normalise(c.message);
+  for (var j = 0; j < existing.length; j++) {
+    var e = existing[j];
+    if (normalise(e.email) + '|' + normalise(e.message) === key &&
+        Math.abs(c.received.getTime() - e.received.getTime()) <= windowMinutes * 60000) {
+      return {outcome: 'repeat ignored', matches: e.id};
+    }
+  }
+  return {outcome: 'stored'};
+}
+
+function followUpDue(received, hours) {
+  return new Date(received.getTime() + hours * 3600000);
+}
+
+/* -------------------------------------------------------------- set-up */
+
+function setup() {
+  var props = PropertiesService.getScriptProperties();
+  if (props.getProperty('SHEET_ID')) {
+    Logger.log('Already set up. Sheet: ' + SpreadsheetApp.openById(props.getProperty('SHEET_ID')).getUrl());
+    Logger.log('Form link to share: ' + FormApp.openById(props.getProperty('FORM_ID')).getPublishedUrl());
+    return;
+  }
+  var ss = SpreadsheetApp.create('Enquiries');
+  var first = ss.getSheets()[0];
+  first.setName('Enquiries');
+  ss.insertSheet('Rejected');
+  ss.insertSheet('Activity');
+  Object.keys(HEADERS).forEach(function (name) {
+    var sh = ss.getSheetByName(name);
+    sh.getRange(1, 1, 1, HEADERS[name].length).setValues([HEADERS[name]]).setFontWeight('bold');
+    sh.setFrozenRows(1);
+  });
+  var enq = ss.getSheetByName('Enquiries');
+  enq.setColumnWidth(6, 360);
+  enq.getRange('B2:B').setNumberFormat('ddd d mmm yyyy hh:mm');
+  enq.getRange('H2:H').setNumberFormat('ddd d mmm yyyy hh:mm');
+  enq.getRange('G2:G').setDataValidation(
+    SpreadsheetApp.newDataValidation().requireValueInList(CONFIG.STATUSES, true).build());
+  var overdue = SpreadsheetApp.newConditionalFormatRule()
+    .whenFormulaSatisfied('=AND($H2<>"",$H2<NOW(),OR($G2="New",$G2="Replied",$G2="Quote sent"))')
+    .setBackground('#f8d7d3').setRanges([enq.getRange('A2:J')]).build();
+  enq.setConditionalFormatRules([overdue]);
+  ss.getSheetByName('Rejected').getRange('B2:B').setNumberFormat('ddd d mmm yyyy hh:mm');
+
+  var form = FormApp.create('Enquiry form');
+  form.setDescription('Tell us what you need and we will get back to you. ' +
+    'We use your name and email address only to reply to this enquiry.');
+  form.setCollectEmail(false);
+  form.setConfirmationMessage('Thank you. Your enquiry has been received.');
+  form.addTextItem().setTitle('Name').setRequired(true);
+  form.addTextItem().setTitle('Email address').setRequired(true)
+    .setValidation(FormApp.createTextValidation().requireTextIsEmail()
+      .setHelpText('Please enter a valid email address.').build());
+  form.addParagraphTextItem().setTitle('Your enquiry').setRequired(true);
+  if (typeof form.setPublished === 'function') form.setPublished(true);
+
+  ScriptApp.newTrigger('onFormSubmitHandler').forForm(form).onFormSubmit().create();
+
+  props.setProperty('SHEET_ID', ss.getId());
+  props.setProperty('FORM_ID', form.getId());
+  logActivity(ss, 'Setup', '-', 'set up', 'Sheet, form and trigger created');
+  Logger.log('Done.');
+  Logger.log('Spreadsheet: ' + ss.getUrl());
+  Logger.log('Form link to share: ' + form.getPublishedUrl());
+}
+
+/* ------------------------------------------------------------ handlers */
+
+function onFormSubmitHandler(e) {
+  var items = {};
+  e.response.getItemResponses().forEach(function (r) { items[r.getItem().getTitle()] = r.getResponse(); });
+  record({
+    id: 'F-' + e.response.getId(),
+    source: 'Form',
+    name: items['Name'],
+    email: items['Email address'],
+    message: items['Your enquiry'],
+    received: e.response.getTimestamp()
+  });
+}
+
+/* ------------------------------------------------------------ storage */
+
+function record(c) {
+  var lock = LockService.getScriptLock();
+  lock.waitLock(30000);
+  try {
+    var ss = SpreadsheetApp.openById(PropertiesService.getScriptProperties().getProperty('SHEET_ID'));
+    var enq = ss.getSheetByName('Enquiries');
+    c.message = String(c.message || '').slice(0, CONFIG.MAX_MESSAGE_CHARS);
+    var existing = readExisting(ss);
+    var result = classify(c, existing, CONFIG.REPEAT_WINDOW_MINUTES);
+    if (result.outcome === 'stored') {
+      enq.appendRow([c.id, c.received, c.source, String(c.name).trim(), String(c.email).trim(), c.message,
+                     'New', followUpDue(c.received, CONFIG.FOLLOW_UP_HOURS),
+                     CONFIG.FOLLOW_UP_HOURS + ' hours after it arrived', '']);
+      logActivity(ss, c.source, c.id, 'stored', '');
+    } else if (result.outcome === 'rejected') {
+      ss.getSheetByName('Rejected').appendRow([c.id, c.received, c.source, c.name || '', c.email || '',
+                                               result.reasons.join('; '), c.message.slice(0, 200)]);
+      logActivity(ss, c.source, c.id, 'rejected', result.reasons.join('; '));
+    } else if (result.outcome === 'repeat ignored') {
+      logActivity(ss, c.source, c.id, 'repeat ignored', 'same address and message as ' + result.matches);
+    }
+    // 'already logged': seen before (e.g. a re-run); nothing to do.
+  } finally {
+    lock.releaseLock();
+  }
+}
+
+function readExisting(ss) {
+  var out = [];
+  var enq = ss.getSheetByName('Enquiries');
+  if (enq.getLastRow() > 1) {
+    enq.getRange(2, 1, enq.getLastRow() - 1, 6).getValues().forEach(function (r) {
+      out.push({id: String(r[0]), received: new Date(r[1]), email: r[4], message: r[5]});
+    });
+  }
+  var rej = ss.getSheetByName('Rejected');
+  if (rej.getLastRow() > 1) {
+    rej.getRange(2, 1, rej.getLastRow() - 1, 1).getValues().forEach(function (r) {
+      out.push({id: String(r[0]), received: new Date(0), email: '', message: ''});
+    });
+  }
+  var act = ss.getSheetByName('Activity');
+  if (act.getLastRow() > 1) {
+    act.getRange(2, 3, act.getLastRow() - 1, 2).getValues().forEach(function (r) {
+      if (r[1] === 'repeat ignored') out.push({id: String(r[0]), received: new Date(0), email: '', message: ''});
+    });
+  }
+  return out;
+}
+
+function logActivity(ss, source, ref, outcome, detail) {
+  ss.getSheetByName('Activity').appendRow([new Date(), source, ref, outcome, detail]);
+}
+
