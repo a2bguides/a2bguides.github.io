@@ -9,4 +9,7 @@ its source.
 
 ## Articles
 
+- [Gifts for Beekeepers: Christmas Presents a Hobby Beekeeper Will Actually Use](guides/gifts-for-beekeepers/)  
+  Gifts for Beekeepers: Christmas Presents a Hobby Beekeeper Will Actually Use. *Last checked 15 October 2026.*
+
 [About this site](about/)
