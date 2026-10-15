@@ -15,4 +15,7 @@ its source.
 - [Gifts for Padel Players: Christmas Presents for the Friend Who Books the 7am Court](guides/gifts-for-padel-players/)  
   Gifts for Padel Players: Christmas Presents for the Friend Who Books the 7am Court. *Last checked 15 October 2026.*
 
+- [Gifts for Cold-Water Swimmers: Christmas Presents for the Friend Who Swims All Winter](guides/gifts-for-cold-water-swimmers/)  
+  Gifts for Cold-Water Swimmers: Christmas Presents for the Friend Who Swims All Winter. *Last checked 15 October 2026.*
+
 [About this site](about/)
