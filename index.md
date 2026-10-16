@@ -18,4 +18,7 @@ its source.
 - [Gifts for Cold-Water Swimmers: Christmas Presents for the Friend Who Swims All Winter](guides/gifts-for-cold-water-swimmers/)  
   Gifts for Cold-Water Swimmers: Christmas Presents for the Friend Who Swims All Winter. *Last checked 15 October 2026.*
 
+- [Gifts for Allotment Gardeners: Christmas Presents a Plot Holder Will Actually Use](guides/gifts-for-allotment-gardeners/)  
+  Christmas gift ideas for allotment gardeners: practical winter kit, planning tools and funny plot-holder gifts they'll use from December to harvest. *Last checked 16 October 2026.*
+
 [About this site](about/)
