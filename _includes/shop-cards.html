@@ -1,0 +1,47 @@
+{%- assign key = page.url | remove: "/guides/" | remove: "/" -%}
+{%- assign cards = site.data.shop[key] -%}
+{%- if cards and cards.size > 0 -%}
+{%- if include.compact -%}
+<aside class="a2b-shop a2b-shop--top" aria-label="From our shop">
+  <p class="a2b-shop__head"><strong>From our shop:</strong> {{ cards.size }} {{ include.niche | default: "gifts" }} made by A2B Designs. <a href="#a2b-shop">See them all &darr;</a></p>
+  <div class="a2b-shop__row">
+  {%- for c in cards limit: 3 -%}
+    <a class="a2b-card a2b-card--small" href="{{ c.url }}" rel="noopener" target="_blank">
+      {%- if c.img -%}<img src="{{ c.img }}" alt="{{ c.alt | escape }}" loading="lazy" width="170" height="170">{%- endif -%}
+      <span class="a2b-card__name">{{ c.name }}</span><span class="a2b-card__price">{{ c.price }}</span>
+    </a>
+  {%- endfor -%}
+  </div>
+</aside>
+{%- else -%}
+<section class="a2b-shop" id="a2b-shop" aria-label="From our shop">
+  <h2>From our shop</h2>
+  <p class="a2b-shop__note">A2B Designs runs this site and makes these. They are printed to order in the UK and sold on Etsy.</p>
+  <div class="a2b-shop__grid">
+  {%- for c in cards -%}
+    <a class="a2b-card" href="{{ c.url }}" rel="noopener" target="_blank">
+      {%- if c.img -%}<img src="{{ c.img }}" alt="{{ c.alt | escape }}" loading="lazy" width="220" height="220">{%- endif -%}
+      <span class="a2b-card__name">{{ c.name }}</span>
+      <span class="a2b-card__price">{{ c.price }}</span>
+      <span class="a2b-card__go">View on Etsy &rarr;</span>
+    </a>
+  {%- endfor -%}
+  </div>
+</section>
+{%- endif -%}
+{%- endif -%}
+<style>
+.a2b-shop{margin:1.6em 0;padding:16px;border:2px solid #e8d9b8;border-radius:12px;background:#fffaf0}
+.a2b-shop--top{margin:0 0 1.6em;padding:12px 14px}
+.a2b-shop h2{margin-top:0}
+.a2b-shop__head{margin:0 0 10px}.a2b-shop__note{font-size:.9em;color:#555}
+.a2b-shop__row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.a2b-shop__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px}
+.a2b-card{display:flex;flex-direction:column;gap:4px;padding:8px;background:#fff;border:1px solid #e6e1d6;border-radius:10px;color:#222;text-decoration:none}
+.a2b-card:hover{border-color:#c9a45c;text-decoration:none}
+.a2b-card img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:6px;background:#f3efe6}
+.a2b-card__name{font-weight:600;font-size:.92em;line-height:1.25}.a2b-card__price{color:#7a5a12;font-size:.9em}
+.a2b-card__go{color:#2a7ae2;font-size:.88em}
+.a2b-card--small .a2b-card__name{font-size:.82em}
+@media (max-width:520px){.a2b-shop__row{grid-template-columns:repeat(3,1fr);gap:6px}.a2b-card--small .a2b-card__name{font-size:.75em}}
+</style>
