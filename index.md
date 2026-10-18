@@ -21,4 +21,7 @@ its source.
 - [Gifts for Allotment Gardeners: Christmas Presents a Plot Holder Will Actually Use](guides/gifts-for-allotment-gardeners/)  
   Christmas gift ideas for allotment gardeners: practical winter kit, planning tools and funny plot-holder gifts they'll use from December to harvest. *Last checked 16 October 2026.*
 
+- [Gifts for Model Railway Enthusiasts: Christmas Ideas for Every Layout and Budget](guides/gifts-for-model-railway-enthusiasts/)  
+  Gifts for Model Railway Enthusiasts: Christmas Ideas for Every Layout and Budget. *Last checked 18 October 2026.*
+
 [About this site](about/)
