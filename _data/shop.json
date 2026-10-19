@@ -1,6 +1,13 @@
 {
  "craft-fair-stall-checklist-christmas": [
   {
+   "name": "“Yes, I made it. Yes, it took ages.” mug",
+   "price": "from £11.99",
+   "url": "https://www.etsy.com/listing/4598587496",
+   "img": "https://i.etsystatic.com/68571399/r/il/c44d7b/8703997754/il_570xN.8703997754_hvp5.jpg",
+   "alt": "Mug printed with the words YES, I MADE IT. YES, IT TOOK AGES."
+  },
+  {
    "name": "“Yes, I made it. Yes, it took ages.” t-shirt",
    "price": "from £18.99",
    "url": "https://www.etsy.com/listing/4595800664",
@@ -217,6 +224,13 @@
    "url": "https://www.etsy.com/listing/4595794003",
    "img": "https://i.etsystatic.com/68571399/r/il/ef98f1/8697322240/il_570xN.8697322240_htcv.jpg",
    "alt": "Sweatshirt printed with the words BED AND BREAKFAST AGAIN"
+  },
+  {
+   "name": "“Bed and breakfast again” coaster",
+   "price": "from £8.99",
+   "url": "https://www.etsy.com/listing/4598565279",
+   "img": "https://i.etsystatic.com/68571399/r/il/95c264/8703997686/il_570xN.8703997686_l3yf.jpg",
+   "alt": "Coaster printed with the words BED AND BREAKFAST AGAIN"
   },
   {
    "name": "“Bed and breakfast again” sticker",
