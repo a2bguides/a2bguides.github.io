@@ -38,11 +38,11 @@
    "alt": "Mug printed with the words COURGETTE SURPLUS SPECIALIST"
   },
   {
-   "name": "“Muddy boots, hot flask” t-shirt",
-   "price": "from £18.99",
-   "url": "https://www.etsy.com/listing/4594692109",
-   "img": "https://i.etsystatic.com/68571399/r/il/045047/8694901020/il_570xN.8694901020_4vcn.jpg",
-   "alt": "T-shirt printed with the words MUDDY BOOTS, HOT FLASK"
+   "name": "“Muddy boots, hot flask” mug",
+   "price": "from £11.99",
+   "url": "https://www.etsy.com/listing/4598136582",
+   "img": "https://i.etsystatic.com/68571399/r/il/cdc1b9/8700473876/il_570xN.8700473876_h8om.jpg",
+   "alt": "Mug printed with the words MUDDY BOOTS, HOT FLASK"
   },
   {
    "name": "“Survived the waiting list plot holder” mug",
@@ -52,11 +52,32 @@
    "alt": "Mug printed with the words SURVIVED THE WAITING LIST PLOT HOLDER"
   },
   {
+   "name": "“Courgette surplus specialist” apron",
+   "price": "from £28.49",
+   "url": "https://www.etsy.com/listing/4598171624",
+   "img": "https://i.etsystatic.com/68571399/r/il/abe95c/8748275973/il_570xN.8748275973_ivk5.jpg",
+   "alt": "Apron printed with the words COURGETTE SURPLUS SPECIALIST"
+  },
+  {
+   "name": "“Muddy boots, hot flask” t-shirt",
+   "price": "from £18.99",
+   "url": "https://www.etsy.com/listing/4594692109",
+   "img": "https://i.etsystatic.com/68571399/r/il/045047/8694901020/il_570xN.8694901020_4vcn.jpg",
+   "alt": "T-shirt printed with the words MUDDY BOOTS, HOT FLASK"
+  },
+  {
    "name": "“Muddy boots, hot flask” sweatshirt",
    "price": "from £31.99",
    "url": "https://www.etsy.com/listing/4595499941",
    "img": "https://i.etsystatic.com/68571399/r/il/f2865b/8742736033/il_570xN.8742736033_neum.jpg",
    "alt": "Sweatshirt printed with the words MUDDY BOOTS, HOT FLASK"
+  },
+  {
+   "name": "“Muddy boots, hot flask” tote bag",
+   "price": "from £16.99",
+   "url": "https://www.etsy.com/listing/4598172096",
+   "img": "https://i.etsystatic.com/68571399/r/il/88f63d/8748448319/il_570xN.8748448319_9sxh.jpg",
+   "alt": "Tote bag printed with the words MUDDY BOOTS, HOT FLASK"
   },
   {
    "name": "“Muddy boots, hot flask” sticker",
@@ -71,13 +92,6 @@
    "url": "https://www.etsy.com/listing/4594762858",
    "img": "https://i.etsystatic.com/68571399/r/il/b2bc6f/8694653684/il_570xN.8694653684_r989.jpg",
    "alt": "T-shirt printed with the words SURVIVED THE WAITING LIST PLOT HOLDER"
-  },
-  {
-   "name": "“Survived the waiting list plot holder” sticker",
-   "price": "from £2.99",
-   "url": "https://www.etsy.com/listing/4594744257",
-   "img": "https://i.etsystatic.com/68571399/r/il/486282/8697321354/il_570xN.8697321354_evw0.jpg",
-   "alt": "Sticker printed with the words SURVIVED THE WAITING LIST PLOT HOLDER"
   }
  ],
  "gifts-for-beekeepers": [
@@ -94,6 +108,20 @@
    "url": "https://www.etsy.com/listing/4595149465",
    "img": "https://i.etsystatic.com/68571399/r/il/d6981e/8745143629/il_570xN.8745143629_k0tn.jpg",
    "alt": "T-shirt printed with the words ASK TEN BEEKEEPERS. GET ELEVEN ANSWERS."
+  },
+  {
+   "name": "“Ask ten beekeepers. Get eleven answers.” sweatshirt",
+   "price": "from £31.99",
+   "url": "https://www.etsy.com/listing/4598168973",
+   "img": "",
+   "alt": "Sweatshirt printed with the words ASK TEN BEEKEEPERS. GET ELEVEN ANSWERS."
+  },
+  {
+   "name": "“Ask ten beekeepers. Get eleven answers.” tote bag",
+   "price": "from £16.99",
+   "url": "https://www.etsy.com/listing/4598189422",
+   "img": "https://i.etsystatic.com/68571399/r/il/7612f7/8748590915/il_570xN.8748590915_lqb1.jpg",
+   "alt": "Tote bag printed with the words ASK TEN BEEKEEPERS. GET ELEVEN ANSWERS."
   },
   {
    "name": "“Ask ten beekeepers. Get eleven answers.” sticker",
@@ -140,32 +168,32 @@
    "alt": "Sweatshirt printed with the words BOXING DAY DIPPER 26 DEC"
   },
   {
+   "name": "“Boxing day dipper 26 dec” hoodie",
+   "price": "from £44.49",
+   "url": "https://www.etsy.com/listing/4598115435",
+   "img": "https://i.etsystatic.com/68571399/r/il/8b0096/8747972233/il_570xN.8747972233_tec0.jpg",
+   "alt": "Hoodie printed with the words BOXING DAY DIPPER 26 DEC"
+  },
+  {
+   "name": "“Boxing day dipper 26 dec” tote bag",
+   "price": "from £16.99",
+   "url": "https://www.etsy.com/listing/4598151275",
+   "img": "",
+   "alt": "Tote bag printed with the words BOXING DAY DIPPER 26 DEC"
+  },
+  {
+   "name": "“Boxing day dipper 26 dec” christmas ornament",
+   "price": "from £12.49",
+   "url": "https://www.etsy.com/listing/4598151181",
+   "img": "https://i.etsystatic.com/68571399/r/il/e3f23a/8700458758/il_570xN.8700458758_oycb.jpg",
+   "alt": "Christmas ornament printed with the words BOXING DAY DIPPER 26 DEC"
+  },
+  {
    "name": "“Boxing day dipper 26 dec” sticker",
    "price": "from £2.99",
    "url": "https://www.etsy.com/listing/4594691709",
    "img": "https://i.etsystatic.com/68571399/r/il/6efc4a/8741815159/il_570xN.8741815159_mkwl.jpg",
    "alt": "Sticker printed with the words BOXING DAY DIPPER 26 DEC"
-  },
-  {
-   "name": "“Single digits swim club 9°” sweatshirt",
-   "price": "from £31.99",
-   "url": "https://www.etsy.com/listing/4595507361",
-   "img": "https://i.etsystatic.com/68571399/r/il/815df9/8696975752/il_570xN.8696975752_mw19.jpg",
-   "alt": "Sweatshirt printed with the words SINGLE DIGITS SWIM CLUB 9°"
-  },
-  {
-   "name": "“Single digits swim club 9°” sticker",
-   "price": "from £2.99",
-   "url": "https://www.etsy.com/listing/4594762790",
-   "img": "https://i.etsystatic.com/68571399/r/il/a2a90c/8744797611/il_570xN.8744797611_dd2u.jpg",
-   "alt": "Sticker printed with the words SINGLE DIGITS SWIM CLUB 9°"
-  },
-  {
-   "name": "“The swim is easy. Getting dressed isn't.” sweatshirt",
-   "price": "from £31.99",
-   "url": "https://www.etsy.com/listing/4595529140",
-   "img": "https://i.etsystatic.com/68571399/r/il/2e5b7a/8697321884/il_570xN.8697321884_qp9y.jpg",
-   "alt": "Sweatshirt printed with the words THE SWIM IS EASY. GETTING DRESSED ISN'T."
   }
  ],
  "gifts-for-darts-players": [
