@@ -33,4 +33,7 @@ its source.
 - [Christmas Craft Fair Stall Checklist: What to Take, How to Display, and Gifts for Makers](guides/craft-fair-stall-checklist-christmas/)  
   A Christmas craft fair stall checklist: display, card payments, staying warm, product safety basics, and gift ideas for the makers behind the table. *Last checked 18 October 2026.*
 
+- [Panto Opening-Night Gifts: Cards and Presents for Am-Dram Cast and Crew](guides/gifts-for-panto-cast-and-crew/)  
+  Panto Opening-Night Gifts: Cards and Presents for Am-Dram Cast and Crew. *Last checked 19 October 2026.*
+
 [About this site](about/)
