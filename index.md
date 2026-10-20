@@ -39,4 +39,7 @@ its source.
 - [Allotment Jobs in December: What to Do on the Plot (Plus Stocking Fillers for Growers)](guides/allotment-jobs-december/)  
   Allotment Jobs in December: What to Do on the Plot (Plus Stocking Fillers for Growers). *Last checked 20 October 2026.*
 
+- [Gifts for Potters: Christmas Presents for Home and Studio Potters](guides/gifts-for-potters/)  
+  Gifts for Potters: Christmas Presents for Home and Studio Potters. *Last checked 20 October 2026.*
+
 [About this site](about/)
