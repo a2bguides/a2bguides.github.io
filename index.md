@@ -36,4 +36,7 @@ its source.
 - [Panto Opening-Night Gifts: Cards and Presents for Am-Dram Cast and Crew](guides/gifts-for-panto-cast-and-crew/)  
   Panto Opening-Night Gifts: Cards and Presents for Am-Dram Cast and Crew. *Last checked 19 October 2026.*
 
+- [Allotment Jobs in December: What to Do on the Plot (Plus Stocking Fillers for Growers)](guides/allotment-jobs-december/)  
+  Allotment Jobs in December: What to Do on the Plot (Plus Stocking Fillers for Growers). *Last checked 20 October 2026.*
+
 [About this site](about/)
